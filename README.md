@@ -25,7 +25,7 @@ datasource db {
 
 
 แก้ prisma.config.ts
-import { defineConfig } from "@prisma/config";
+iimport { defineConfig } from "@prisma/config";
 
 export default defineConfig({
   schema: "./prisma/schema.prisma",
@@ -34,6 +34,7 @@ export default defineConfig({
     url: process.env.DATABASE_URL
   }
 });
+
 npx prisma generate
 
 npx prisma db pull
