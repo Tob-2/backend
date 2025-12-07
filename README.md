@@ -26,7 +26,7 @@ generator client {
 
 
 
-npx prisma generate
+npx prisma generate ถ้าบัคข้ามไปdb pullเลย
 
 npx prisma db pull
 
