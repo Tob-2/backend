@@ -1,8 +1,8 @@
 npm start  "start": "node app.js"   node app.js http://localhost:8080/67130500086/api/
 npm init -y
 npm install express
-npm install prisma --save-dev
-npm install @prisma/client
+npm install prisma@5.14.0 --save-dev
+npm install @prisma/client@5.14.0
 npm install mysql2
 npm install --save-dev nodemon
 "dev": "nodemon app.js"  แล้วเพิ่มใน package.json npm run dev
