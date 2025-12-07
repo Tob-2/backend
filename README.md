@@ -15,28 +15,16 @@ DATABASE_URL="mysql://root:password@localhost:3306/ass_67130xxxxx"
 
 
 แก้shema.prismaก่อรค่อยdb pull
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
 generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "mysql"
-}
 
-
-แก้ prisma.config.ts
-import "dotenv/config";
-import { defineConfig, env } from "prisma/config";
-
-export default defineConfig({
-  schema: "prisma/schema.prisma",
-  migrations: {
-    path: "prisma/migrations",
-  },
-  datasource: {
-    url: env("DATABASE_URL"),
-  },
-});
 
 npx prisma generate
 
