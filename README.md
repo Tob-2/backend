@@ -12,6 +12,16 @@ npx prisma init  จะได้โฟลเดอร์:prisma/
 จากนั้นแก้ใน .env ให้ตรงกับ DB ที่คุณเพิ่งสร้างเอง เช่น:
 
 DATABASE_URL="mysql://root:password@localhost:3306/ass_67130xxxxx"
+แก้shema.prismaก่อรค่อยdb pull
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
 npx prisma db pull
 
 
